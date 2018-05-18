@@ -1,0 +1,1 @@
+docker run -it -d --restart=always --name union_kakou_upload_ser --privileged=true -p 8380:8380 -v /home/core/GitHub:/home -v /var/GitHub/SX-UnionKakouUploadService:/var centos-python3.6/requests:1.4 gunicorn -c /home/SX-UnionKakouUploadService/gun.py --chdir /home/SX-UnionKakouUploadService run:app
